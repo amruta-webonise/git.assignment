@@ -1,6 +1,6 @@
 
 <h1>Tags</h1>
-<?php echo $this->Html->link('Add Tag', array('controller' => 'tags', 'action' => 'add')); ?>
+
 <table>
     <tr>
         <th>Id</th>
