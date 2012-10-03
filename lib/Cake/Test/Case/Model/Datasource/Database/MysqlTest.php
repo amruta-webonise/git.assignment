@@ -1980,14 +1980,14 @@ class MysqlTest extends CakeTestCase {
 		$expected = " WHERE `Company`.`name` like 'd.a%'";
 		$this->assertEquals($expected, $result);
 
-		$conditions = array('Artist.name' => 'JUDY and MARY');
+		$conditions = array('Artists.name' => 'JUDY and MARY');
 		$result = $this->Dbo->conditions($conditions);
-		$expected = " WHERE `Artist`.`name` = 'JUDY and MARY'";
+		$expected = " WHERE `Artists`.`name` = 'JUDY and MARY'";
 		$this->assertEquals($expected, $result);
 
-		$conditions = array('Artist.name' => 'JUDY AND MARY');
+		$conditions = array('Artists.name' => 'JUDY AND MARY');
 		$result = $this->Dbo->conditions($conditions);
-		$expected = " WHERE `Artist`.`name` = 'JUDY AND MARY'";
+		$expected = " WHERE `Artists`.`name` = 'JUDY AND MARY'";
 		$this->assertEquals($expected, $result);
 
 		$conditions = array('Company.name similar to ' => 'a word');
